@@ -18,13 +18,13 @@ public class Sale {
 
     public void perform() throws EmptySaleException {
         if (products.isEmpty()) {
-            throw new EmptySaleException();
+            throw new EmptySaleException("Empty list, sale cannot be made!");
         } else {
             total = 0;
             for (Product p : products) {
                 total += p.price();
             }
-            System.out.println("Venta realizada con èxito. Total: " + total + "€");
+            System.out.println("Sale completed successfully. Total: " + total + "€");
         }
     }
 
